@@ -26,4 +26,5 @@ public class notepad {
 		s.type("Notepad.png","Sikuli image recognition...");
 		System.out.println("recognition complete//.....");
 	}
+	
 }

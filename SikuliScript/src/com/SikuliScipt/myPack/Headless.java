@@ -10,13 +10,13 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Headless {
 
-	public static void main(String[] args) throws InterruptedException
-	{ long initialtime = TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis());
-	
-	 System.out.println("initial time "+initialtime*1000);
+	public static void main(String[] args) throws InterruptedException {
+		long initialtime = TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis());
+
+		System.out.println("initial time " + initialtime * 1000);
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ahmed.javed\\Music\\chromedriver.exe");
 
-		  ChromeOptions options = new ChromeOptions();
+		ChromeOptions options = new ChromeOptions();
 		options.addArguments("headless");
 		options.addArguments("disable-extensions");
 		options.addArguments("test-type", "allow-no-sandbox-job", "no-sandbox");
@@ -24,33 +24,43 @@ public class Headless {
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		capabilities.setCapability("unexpectedAlertBehaviour", "ignore");
 		capabilities.setCapability("handlesAlerts", false);
-		
+
 		WebDriver driver = new ChromeDriver(capabilities);
-		
- 
+
 		driver.get("http://www.avonromance.com");
-		System.out.println("title"+driver.getTitle());
+		System.out.println("title" + driver.getTitle());
 		long endtime = TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis());
-		int timedifference = (int) ((endtime - initialtime)/1000);
-		System.out.println("end time;;"+endtime);
+		int timedifference = (int) ((endtime - initialtime) / 1000);
+		System.out.println("end time;;" + endtime);
 		System.out.println();
-		System.out.println("Total time difference = "+timedifference);
+		System.out.println("Total time difference = " + timedifference);
 		driver.manage().window().maximize();
 		System.out.println("Headless execution starts here....");
 		driver.findElement(By.xpath("(//a[@href='Company.html'])[1]")).click();
 		System.out.println("firsr click done..");
-		//Thread.sleep(5000);
+		// Thread.sleep(5000);
 		driver.findElement(By.xpath("(//a[@href='News.html'])[1]")).click();
 		System.out.println("second click done..");
-		//Thread.sleep(3000);
+		// Thread.sleep(3000);
 		driver.findElement(By.xpath("(//a[@href='Contact.php'])[1]")).click();
 		System.out.println("Third click done..");
-		//Thread.sleep(3000);
-		
-		
-		
-		System.out.println("end time;;"+(System.currentTimeMillis()/1000)%60);
+		// Thread.sleep(3000);
+
+		System.out.println("end time;;" + (System.currentTimeMillis() / 1000) % 60);
 		System.out.println();
-		System.out.println("Total time difference = "+timedifference);
+		System.out.println("Total time difference = " + timedifference);
 	}
+
+	/**
+	 * Vikash is Naughty. Boy Don't Use this method
+	 * @param workingHours : Kitne Ghante Kaam
+	 * @param kaamchorTester : Kon Tester Kaam Chor hai
+	 * @param bugs : Bug kya hai
+	 * @return Ghanta
+	 */
+	public static String vikash(int workingHours, boolean kaamchorTester, String[] bugs) {
+		return null;
+
+	}
+
 }
