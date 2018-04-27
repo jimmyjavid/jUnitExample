@@ -123,7 +123,8 @@ public class clickUsingText implements KeywordLibrary{
 		// webElement.getAttribute("outerHTML"));
 		// break;
 		// }
-
+//Premchand........lkgj;lsajfkldj
+		//djfajflaeworiudjsfadfjdaslfj;ldasjf
 		if (ele != null) {
 			System.out.println("LAst Ele : " + ele.getAttribute("outerHTML"));
 			list.get(tagIndex).click();
